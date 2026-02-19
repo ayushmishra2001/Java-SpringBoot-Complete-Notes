@@ -1,0 +1,1714 @@
+- Java
+    
+    ## Module 1: Introduction to Java and Programming Fundamentals
+    
+    ### 1.1 Java Overview
+    
+    - **History and Evolution of Java**
+        - James Gosling and Sun Microsystems
+        - Java versions timeline (1.0 to current versions)
+        - Key milestones in Java development
+    - **Java Features and Characteristics**
+        - Platform independence (Write Once, Run Anywhere)
+        - Object-Oriented Programming
+        - Robust and secure
+        - Multithreading
+        - Automatic memory management (Garbage Collection)
+    - **Java Ecosystem**
+        - JVM (Java Virtual Machine)
+        - JRE (Java Runtime Environment)
+        - JDK (Java Development Kit)
+        - Difference between JVM, JRE, and JDK
+    
+    ### 1.2 Setting Up Development Environment
+    
+    - **Installing JDK**
+        - Downloading and installing latest JDK
+        - Setting up JAVA_HOME environment variable
+        - Configuring PATH variable
+    - **Development Tools**
+        - IDEs: IntelliJ IDEA, Eclipse, NetBeans
+        - Text editors: VS Code with Java extensions
+        - Build tools introduction: Maven, Gradle
+    - **First Java Program**
+        - Writing "Hello World" program
+        - Understanding public static void main(String[] args)
+        - Compilation process (javac)
+        - Execution process (java)
+    
+    ### 1.3 Basic Syntax and Structure
+    
+    - **Java Program Structure**
+        - Packages and import statements
+        - Class declaration
+        - Method definitions
+        - Code blocks and scope
+        - **Source file structure rules** (public class name must match filename)
+    - **Java Naming Conventions**
+        - Classes: PascalCase
+        - Methods and variables: camelCase
+        - Constants: UPPER_CASE
+        - Packages: lowercase
+        - **Reserved keywords and contextual keywords**
+    - **Comments and Documentation**
+        - **Javadoc comments** (`/** */`) with tags (`@param`, `@return`, `@throws`)
+        - **Single-line comments** (`//`)
+        - **Multi-line comments** (`/* */`)
+    - **Code Organization & Readability**
+        - **Import specific classes vs wildcard imports**
+        - **Static imports**
+        - **Indentation standards and brace placement**
+        - **Line length and method length guidelines**
+    
+    ### 1.4 Variables and Data Types
+    
+    - **Primitive Data Types**
+        - Integer types: byte, short, int, long
+        - Floating-point types: float, double
+        - Character type: char
+        - Boolean type: boolean
+    - **Reference Data Types**
+        - Strings
+        - Arrays
+        - Objects
+        - **Wrapper classes** (Integer, Double, Boolean, Character, etc.)
+    - **Variable Declaration and Initialization**
+        - Syntax for variable declaration
+        - Initialization techniques
+        - Type inference (var in Java 10+)
+        - **Local variable type inference limitations**
+    - **Variable Scope and Lifetime**
+        - **Local variables** (must be initialized before use)
+        - **Instance variables** (default values)
+        - **Class variables** (static)
+        - **Parameter variables**
+        - **Variable shadowing**
+    - **Literals**
+        - **Integer literals** (decimal, octal 0-prefix, hexadecimal 0x-prefix, binary 0b-prefix)
+        - **Floating-point literals** (scientific notation)
+        - **Character literals** (escape sequences: `\\n`, `\\t`, `\\uFFFF`)
+        - **String literals**
+        - **Null literal**
+    - **Type Casting and Conversion**
+        - Implicit casting (widening)
+        - Explicit casting (narrowing)
+        - String to primitive conversion
+        - Primitive to String conversion
+        - **Autoboxing and unboxing** (automatic primitive-wrapper conversion)
+    - **Common Pitfalls**
+        - **Floating-point precision issues**
+        - **Integer overflow**
+        - **Null pointer exceptions in chains**
+    
+    ### 1.5 Operators
+    
+    - **Arithmetic Operators**
+        - +, -, *, /, %
+        - Increment and decrement: ++, --
+        - **Integer division vs floating-point division**
+        - **Modulo operator with negative numbers**
+    - **Relational Operators**
+        - ==, !=, >, <, >=, <=
+        - **Null-safe comparison techniques**
+    - **Logical Operators**
+        - &&, ||, !
+        - Short-circuit evaluation
+        - **Short-circuit evaluation examples** (avoiding NPE)
+    - **Bitwise Operators**
+        - &, |, ^, ~, <<, >>, >>>
+        - **Practical applications** (flags, masks, bit manipulation)
+    - **Assignment Operators**
+        - =, +=, -=, *=, /=, %=
+    - **Ternary Operator**
+        - condition ? value1 : value2
+    - **Instanceof Operator**
+        - **Type checking with instanceof**
+        - **Pattern matching with instanceof** (Java 14+)
+    - **String Concatenation**
+        - **+ operator for string concatenation**
+        - **Performance implications**
+    - **Operator Precedence and Associativity**
+        - **Complete precedence table with examples**
+        - **Using parentheses for clarity**
+    
+    ### 1.6 Control Flow Statements
+    
+    - **Conditional Statements**
+        - if, if-else, if-else-if ladder
+        - Nested if statements
+        - switch statement (traditional and enhanced)
+        - Pattern matching in switch (Java 14+)
+        - **Switch expressions** (Java 14+) with `>` syntax and `yield`
+        - **Multiple case labels** in switch
+        - **Default case behavior**
+    - **Looping Statements**
+        - for loop (traditional and enhanced for-each)
+        - while loop
+        - do-while loop
+        - Nested loops
+        - **For-each loop limitations** (cannot modify collection during iteration)
+    - **Jump Statements**
+        - break (with and without label)
+        - continue (with and without label)
+        - return statement
+        - **Labeled breaks and continues** with nested loops
+    - **Control Flow Best Practices**
+        - **Avoiding deep nesting** (early returns, guard clauses)
+        - **Loop optimization** (moving invariant code outside loops)
+        - **Switch vs if-else performance considerations**
+        - **Code readability in complex control flows**
+    - **Error Handling in Control Flow**
+        - **Returning from finally blocks** (behavior and pitfalls)
+        - **Control flow in try-catch-finally blocks**
+    
+    ## Module 2: Object-Oriented Programming (OOP)
+    
+    ### 2.1 Classes and Objects
+    
+    - **Understanding Classes**
+        - Class declaration and structure
+        - Fields (instance variables)
+        - Methods (instance methods)
+        - Constructors
+    - **Creating Objects**
+        - new keyword
+        - Object initialization
+        - Memory allocation for objects
+    - **Constructors**
+        - Default constructor
+        - Parameterized constructor
+        - Constructor overloading
+        - Constructor chaining (this())
+    - **The 'this' Keyword**
+        - Referring to current object
+        - Differentiating instance variables from parameters
+        - Calling other constructors
+    
+    ### 2.2 Methods
+    
+    - **Method Declaration**
+        - Access modifiers
+        - Return types
+        - Method names
+        - Parameters
+    - **Method Types**
+        - Instance methods
+        - Static methods
+        - Abstract methods
+        - Final methods
+    - **Method Overloading**
+        - Same method name, different parameters
+        - Type promotion in overloading
+        - Return type in overloading
+    - **Method Parameters and Return Values**
+        - Pass by value mechanism
+        - Returning objects from methods
+        - Variable arguments (varargs)
+    - **Advanced Method Concepts**
+        - **Bridge methods** in generics (type erasure impact)
+        - **Varargs heap pollution** warnings
+        - **Method signature** rules (name + parameters)
+    
+    ### 2.3 Encapsulation and Data Hiding
+    
+    - **Access Modifiers**
+        - private, default (package-private), protected, public
+        - Access level implications
+    - **Getters and Setters**
+        - Implementing encapsulation
+        - Validation in setters
+        - Read-only and write-only properties
+    - **Java Beans Convention**
+        - Properties naming
+        - Default constructor requirement
+        - Serializable implementation
+    - **Immutable Objects** (**NEW**)
+        - **Rules for creating immutable classes**
+        - **Defensive copying** in constructors and getters
+        - **Benefits for thread safety** and caching
+        - **String class** as prime example
+    
+    ### 2.4 Inheritance
+    
+    - **Inheritance Concepts**
+        - extends keyword
+        - Superclass and subclass relationship
+        - IS-A relationship
+    - **Method Overriding**
+        - @Override annotation
+        - Rules for method overriding
+        - Covariant return types
+        - Access modifiers in overriding
+    - **The super Keyword**
+        - Accessing superclass methods
+        - Accessing superclass constructors
+        - super() constructor call
+    - **Types of Inheritance**
+        - Single inheritance
+        - Multilevel inheritance
+        - Hierarchical inheritance
+        - Multiple inheritance (through interfaces)
+    - **Object Class** (**ENHANCED**)
+        - Root of all classes
+        - Important methods: toString(), equals(), hashCode()
+        - **equals() and hashCode() Contract** (**NEW**)
+            - Mandatory relationship between these methods
+            - Impact on HashMap, HashSet performance
+            - Practical implementation with null checks
+        - **clone() Method and Cloneable Interface** (**NEW**)
+            - Shallow vs deep copying
+            - Why Cloneable is a broken pattern
+        - **finalize() method** (with deprecation warning) (**NEW**)
+    
+    ### 2.5 Polymorphism
+    
+    - **Compile-time Polymorphism**
+        - Method overloading
+        - Operator overloading (limited in Java)
+    - **Runtime Polymorphism**
+        - Method overriding
+        - Dynamic method dispatch
+        - Virtual method invocation
+    - **Polymorphism in Practice**
+        - Reference variables and object types
+        - Upcasting and downcasting
+        - instanceof operator
+    - **Pattern Matching** (**NEW**)
+        - **Pattern matching for instanceof** (Java 14+)
+        - **Record patterns** (Java 19+)
+    
+    ### 2.6 Abstraction
+    
+    - **Abstract Classes**
+        - abstract keyword
+        - Abstract methods
+        - Concrete methods in abstract classes
+        - Constructor in abstract classes
+    - **Interfaces**
+        - interface keyword
+        - Constant declarations
+        - Method declarations (abstract methods)
+        - Interface implementation (implements keyword)
+    - **Interface Evolution**
+        - Default methods (Java 8)
+        - Static methods in interfaces (Java 8)
+        - Private methods in interfaces (Java 9)
+        - **Sealed interfaces** (**NEW**)
+    - **Functional Interfaces**
+        - Single Abstract Method (SAM) interfaces
+        - @FunctionalInterface annotation
+        - Built-in functional interfaces
+    
+    ### 2.7 Advanced OOP Concepts
+    
+    - **Composition vs Inheritance**
+        - HAS-A relationship
+        - When to use composition over inheritance
+    - **Final Keyword**
+        - final variables (constants)
+        - final methods (cannot be overridden)
+        - final classes (cannot be inherited)
+    - **Static Members**
+        - static variables (class variables)
+        - static methods
+        - static blocks
+        - static nested classes
+    - **Nested Classes**
+        - Static nested classes
+        - Inner classes (non-static nested classes)
+        - Local classes
+        - Anonymous classes
+    
+    ### 2.8 Initialization and Object Lifecycle
+    
+    - **Initialization Blocks**
+        - **Static Initialization Blocks**
+            - Execution timing (class loading)
+            - Multiple static blocks order
+        - **Instance Initialization Blocks**
+            - Execution order with constructors
+            - Use cases vs constructors
+    - **Initialization Sequence**
+        - **Complete execution order**: static blocks → instance blocks → constructors
+        - Parent class initialization before child class
+    - **Object Lifecycle Management**
+        - Object creation patterns
+        - **Object pooling** concepts
+        - **Garbage Collection eligibility** (no references)
+    
+    ### 2.9 Modern Java OOP Features
+    
+    - **Records (Java 16+)** (**NEW**)
+        - **Data carrier classes** with auto-generated methods
+        - **Compact constructors** for validation
+        - **When to use vs traditional classes**
+    - **Sealed Classes (Java 17+)** (**NEW**)
+        - **Controlled inheritance** with `sealed`, `non-sealed`, `permits`
+        - **Exhaustiveness checking** for pattern matching
+    - **Enhanced Interfaces** (**NEW**)
+        - **Interface private methods** use cases
+        - **Sealed interfaces** implementation
+    
+    ### 2.10 OOP Design Principles & Patterns (**NEW SECTION**)
+    
+    - **Design Principles** (**NEW**)
+        - **SOLID principles** overview
+            - Single Responsibility Principle (SRP)
+            - Open/Closed Principle (OCP)
+            - Liskov Substitution Principle (LSP)
+            - Interface Segregation Principle (ISP)
+            - Dependency Inversion Principle (DIP)
+        - **Law of Demeter** ("don't talk to strangers")
+    - **Object Creation Patterns** (**NEW**)
+        - **Factory methods** and static factory patterns
+        - **Singleton pattern** implementation
+        - **Builder pattern** for complex objects
+    - **Common OOP Anti-patterns** (**NEW**)
+        - **Circular dependencies** and resolution
+        - **God objects** (classes doing too much)
+        - **Anemic domain model** vs rich domain model
+    
+    ### 2.11 Object Sharing and Thread Safety (**NEW SECTION**)
+    
+    - **Designing for Concurrency** (**NEW**)
+        - **Immutable objects** as inherently thread-safe
+        - **Safely publishing objects** between threads
+        - **Designing classes for safe sharing**
+    - **Memory Visibility** (**NEW**)
+        - **Java Memory Model** basics for OOP
+        - **Happens-before relationships**
+        - **Final field semantics**
+    
+    ### 2.12 Practical OOP Implementation (**NEW SECTION**)
+    
+    - **Performance Considerations** (**NEW**)
+        - Object creation costs
+        - Method invocation overhead
+        - Memory footprint optimization
+    - **Debugging OOP Code** (**NEW**)
+        - Common inheritance issues
+        - Polymorphism debugging techniques
+        - Memory leak patterns in OOP
+    
+    ---
+    
+    ## Module 3: Core Java APIs and Libraries
+    
+    ### 3.1 String Handling
+    
+    - **String Class**
+        - Immutability of strings
+        - String pool concept
+        - String creation methods
+        - **String interning and `intern()` method** (**NEW**)
+    - **String Methods**
+        - Length and character access: length(), charAt()
+        - Comparison: equals(), compareTo(), equalsIgnoreCase()
+        - Searching: indexOf(), lastIndexOf(), contains()
+        - Substring: substring()
+        - Modification: replace(), toLowerCase(), toUpperCase(), trim()
+        - Splitting and joining: split(), join()
+    - **StringBuilder and StringBuffer**
+        - Mutable string classes
+        - Difference between StringBuilder and StringBuffer
+        - Methods: append(), insert(), delete(), reverse()
+    - **String Formatting**
+        - String.format()
+        - System.out.printf()
+        - MessageFormat class
+    - **Modern String Features** (**NEW**)
+        - **Text Blocks** (Java 15+) for multi-line strings
+        - **StringJoiner** class for efficient joining
+        - **String performance implications** in loops
+        - **String comparison pitfalls** (`==` vs `equals()`)
+        - **String.transform()** and **String.formatted()** (Java 12+)
+    
+    ### 3.2 Arrays and Collections
+    
+    - **Arrays**
+        - Single-dimensional arrays
+        - Multi-dimensional arrays
+        - Array initialization
+        - Array operations: sorting, searching
+        - Arrays utility class
+        - **Arrays deep methods**: `deepToString()`, `deepEquals()`, `compare()`, `mismatch()` (**NEW**)
+    - **Collection Framework Overview**
+        - Collection hierarchy
+        - Core collection interfaces: Collection, List, Set, Queue, Map
+    - **List Implementations**
+        - ArrayList: resizable array implementation
+        - LinkedList: doubly-linked list implementation
+        - Vector: synchronized list
+        - Stack: LIFO structure
+    - **Set Implementations**
+        - HashSet: hash table implementation
+        - LinkedHashSet: maintains insertion order
+        - TreeSet: sorted set implementation
+    - **Queue Implementations**
+        - PriorityQueue: priority-based queue
+        - LinkedList: can be used as queue
+        - Deque interface and ArrayDeque
+    - **Map Implementations**
+        - HashMap: hash table implementation
+        - LinkedHashMap: maintains insertion order
+        - TreeMap: sorted map implementation
+        - Hashtable: synchronized map
+    - **Collections Utility Class**
+        - Sorting: sort()
+        - Searching: binarySearch()
+        - Synchronization wrappers
+        - Unmodifiable wrappers
+    - **Modern Collection Features** (**NEW**)
+        - **Collections Factory Methods** (Java 9+): `List.of()`, `Set.of()`, `Map.of()`, `Map.ofEntries()`
+        - **Enhanced Collection Methods** (Java 8+): `removeIf()`, `replaceAll()`, `computeIfAbsent()`, `merge()`, `getOrDefault()`
+        - **Stream conversion**: `collection.stream()`, `Stream.toList()` (Java 16+)
+    - **Specialized Collections** (**NEW**)
+        - **EnumSet** and **EnumMap**
+        - **WeakHashMap** for cache implementations
+        - **IdentityHashMap** for identity-based keys
+    - **Collection Performance & Pitfalls** (**NEW**)
+        - **Concurrent Modification Exception**: causes and prevention
+        - **Fail-fast vs Fail-safe iterators**
+        - **Collection initial capacity** guidelines
+        - **Choosing the right collection** decision matrix
+    
+    ### 3.3 Exception Handling
+    
+    - **Exception Hierarchy**
+        - Throwable class
+        - Error vs Exception
+        - Checked vs Unchecked exceptions
+    - **Exception Handling Mechanisms**
+        - try-catch block
+        - Multiple catch blocks
+        - Multi-catch block (Java 7+)
+        - finally block
+        - try-with-resources (Java 7+)
+    - **Throwing Exceptions**
+        - throw keyword
+        - throws clause
+        - Creating custom exceptions
+    - **Best Practices**
+        - Exception translation
+        - Logging exceptions
+        - When to use checked vs unchecked exceptions
+    - **Advanced Exception Handling** (**NEW**)
+        - **Exception Chaining** and `initCause()`
+        - **Suppressed Exceptions** in try-with-resources
+        - **Stack Walking API** (Java 9+) for better stack traces
+        - **@Deprecated annotation** with parameters
+        - **Exception performance costs**
+    
+    ### 3.4 Input/Output (I/O) Operations
+    
+    - **Streams Overview**
+        - Byte streams vs Character streams
+        - Input streams and output streams
+    - **File Operations**
+        - File class
+        - Creating, reading, writing files
+        - File permissions and attributes
+    - **Byte Streams**
+        - InputStream and OutputStream
+        - FileInputStream and FileOutputStream
+        - BufferedInputStream and BufferedOutputStream
+    - **Character Streams**
+        - Reader and Writer
+        - FileReader and FileWriter
+        - BufferedReader and BufferedWriter
+    - **Serialization**
+        - Serializable interface
+        - ObjectInputStream and ObjectOutputStream
+        - transient keyword
+        - Custom serialization
+    - **Modern I/O: NIO.2 API (Java 7+)** (**NEW**)
+        - **Path, Files, Paths classes** (modern File replacement)
+        - **Directory operations**: `Files.list()`, `Files.walk()`, `Files.find()`
+        - **File attributes and metadata** access
+        - **File operations**: `Files.copy()`, `Files.move()`, `Files.delete()`
+    - **Additional I/O Classes** (**NEW**)
+        - **Console Class** for secure password input
+        - **Scanner Class** for parsing input
+        - **Character Encoding** handling (UTF-8, ISO-8859-1)
+    - **Advanced I/O Features** (**NEW**)
+        - **WatchService** for directory monitoring
+        - **Asynchronous I/O** (NIO.2)
+        - **Memory-mapped files**
+        - **Zip File System Provider**
+    - **I/O Best Practices & Security** (**NEW**)
+        - **Path Traversal Prevention**
+        - **Resource Exhaustion Attacks** prevention
+        - **I/O buffering strategies**
+        - **Stream closing patterns**
+    
+    ### 3.5 Java 8+ Features
+    
+    - **Lambda Expressions**
+        - Syntax and structure
+        - Functional interfaces with lambdas
+        - Variable capture in lambdas
+    - **Stream API**
+        - Stream creation
+        - Intermediate operations: filter(), map(), sorted()
+        - Terminal operations: forEach(), collect(), reduce()
+        - Parallel streams
+    - **Optional Class**
+        - Avoiding NullPointerException
+        - Creating Optional objects
+        - Methods: ifPresent(), orElse(), map()
+    - **Date and Time API (java.time)**
+        - LocalDate, LocalTime, LocalDateTime
+        - ZonedDateTime, Instant
+        - Period and Duration
+        - DateTimeFormatter
+    - **Other Features**
+        - Method references
+        - Default methods in interfaces
+        - CompletableFuture for asynchronous programming
+    - **Stream API Deep Dive** (**NEW**)
+        - **Collectors Class**: `groupingBy()`, `partitioningBy()`, `joining()`, `toMap()`, `summarizingInt()`, `teeing()` (Java 12+)
+        - **Primitive streams**: `IntStream`, `LongStream`, `DoubleStream`
+        - **Short-circuiting operations**: `findFirst()`, `limit()`, `anyMatch()`
+        - **Custom collector** implementations
+        - **Stream performance characteristics**
+    - **CompletableFuture Advanced** (**NEW**)
+        - **Chaining and composition**: `thenApply()`, `thenCompose()`, `thenCombine()`
+        - **Exception handling** in async operations
+        - **Timeout handling** and completion strategies
+    - **Method References Detailed** (**NEW**)
+        - **Four types**: static, instance, arbitrary object, constructor
+        - **Usage patterns** and best practices
+    
+    ### 3.6 Utility Classes and APIs
+    
+    - **Objects Utility Class** (**NEW**)
+        - `requireNonNull()` for validation
+        - `equals()`, `hash()` for safe comparisons
+        - `checkIndex()` for bounds checking
+        - `isNull()`, `nonNull()` for predicate usage
+    - **Math Utilities** (**NEW**)
+        - **Math vs StrictMath** differences
+        - **Math context** for decimal precision
+        - **Random** and **ThreadLocalRandom** classes
+    - **System Class Utilities** (**NEW**)
+        - **System properties** access
+        - **Environment variables** reading
+        - **System.nanoTime()** vs **System.currentTimeMillis()**
+    - **Pattern and Matcher** (**NEW**)
+        - **Regular expressions** with Java
+        - **Pattern.compile()** and **Matcher** methods
+        - **Pattern.asMatchPredicate()** (Java 11+)
+    
+    ### 3.7 Generics
+    
+    - **Introduction to Generics**
+        - Type safety
+        - Compile-time type checking
+        - Eliminating casts
+    - **Generic Classes and Interfaces**
+        - Type parameters
+        - Multiple type parameters
+        - Bounded type parameters
+    - **Generic Methods**
+        - Type inference
+        - Bounded type parameters in methods
+    - **Wildcards**
+        - Unbounded wildcards: <?>
+        - Upper bounded wildcards: <? extends Type>
+        - Lower bounded wildcards: <? super Type>
+    - **Type Erasure**
+        - How generics are implemented
+        - Bridge methods
+        - Limitations of generics
+    - **Advanced Generic Concepts** (**NEW**)
+        - **Generic Type Inference** improvements (Java 7+ diamond operator)
+        - **Generic Constructor** type inference
+        - **Recursive Generic Types** (self-referential generics)
+        - **Generic Array Creation** limitations and workarounds
+        - **Intersection Types** in wildcards
+        - **Generic Exception** handling
+    
+    ### 3.8 Multithreading and Concurrency
+    
+    - **Thread Fundamentals**
+        - Process vs Thread
+        - Main thread
+        - Thread states and lifecycle
+    - **Creating Threads**
+        - Extending Thread class
+        - Implementing Runnable interface
+        - Implementing Callable interface
+    - **Thread Synchronization**
+        - synchronized keyword
+        - synchronized methods and blocks
+        - volatile keyword
+        - Thread safety issues
+    - **Concurrency Utilities (java.util.concurrent)**
+        - Executor framework
+        - ThreadPoolExecutor
+        - Future and Callable
+        - Lock interface and ReentrantLock
+    - **Concurrent Collections**
+        - ConcurrentHashMap
+        - CopyOnWriteArrayList
+        - BlockingQueue implementations
+    - **Advanced Topics**
+        - Deadlock, livelock, starvation
+        - Atomic variables
+        - CountDownLatch, CyclicBarrier, Semaphore
+        - CompletableFuture (Java 8+)
+    - **Modern Concurrency Features** (**NEW**)
+        - **Virtual Threads (Project Loom)** (**CRITICAL**)
+            - Platform threads vs virtual threads
+            - `Thread.ofVirtual()`, `Thread.startVirtualThread()`
+            - Structured concurrency principles
+        - **Structured Task Scope** (Java 21+)
+        - **ThreadLocal** and **InheritableThreadLocal**
+        - **ForkJoinPool** and work-stealing algorithms
+    - **Reactive Programming** (**NEW**)
+        - **Reactive Streams** and **Flow API** (Java 9+)
+        - **Backpressure** handling strategies
+        - **Publisher-Subscriber** patterns
+    - **Advanced CompletableFuture** (**NEW**)
+        - **Exception handling** in async chains
+        - **Timeout handling** patterns
+        - **Combining multiple futures**
+        - **Completion strategies**
+    
+    ### 3.9 Annotations and Reflection
+    
+    - **Built-in Annotations**
+        - @Override, @Deprecated, @SuppressWarnings
+        - @SafeVarargs, @FunctionalInterface
+    - **Custom Annotations**
+        - Annotation declaration
+        - Retention policies
+        - Target elements
+        - Annotation parameters
+    - **Reflection API**
+        - Class class
+        - Accessing fields, methods, constructors
+        - Dynamic method invocation
+        - Limitations and performance considerations
+    - **Advanced Annotation Features** (**NEW**)
+        - **Annotation Processors** - compile-time processing
+        - **Repeatable Annotations** (Java 8+)
+        - **Type Annotations** (Java 8+) and **JSR 308**
+        - **Annotation Inheritance** behavior
+        - **Runtime Annotation Retention** practical uses
+    - **Modern Reflection API** (**NEW**)
+        - **Method Handles** (Java 7+) and `MethodHandle` class
+        - **VarHandle** (Java 9+) for safe variable access
+        - **Dynamic Proxy** creation and usage
+        - **Module System Reflection** (Java 9+)
+        - **Records Reflection** support
+    - **Reflection Performance** (**NEW**)
+        - **Performance optimization** techniques
+        - **Reflection vs Method Handle** benchmarks
+        - **Caching strategies** for reflection
+    
+    ### 3.10 Memory Management
+    
+    - **JVM Memory Structure**
+        - Heap memory
+        - Stack memory
+        - Method area
+        - PC registers
+        - Native method stacks
+    - **Garbage Collection**
+        - GC algorithms: Mark and Sweep, Generational GC
+        - GC roots
+        - Types of garbage collectors
+    - **Memory Management Techniques**
+        - Object lifecycle
+        - Memory leaks detection and prevention
+        - Soft, weak, and phantom references
+    - **Modern Garbage Collectors** (**NEW**)
+        - **G1 Garbage Collector** deep dive (default since Java 9)
+        - **ZGC** (Low-latency collector)
+        - **Shenandoah** (Low-pause-time collector)
+        - **Epsilon No-Op GC** (Performance testing)
+        - **Serial vs Parallel vs CMS** comparison
+    - **Memory Optimization** (**NEW**)
+        - **JVM Ergonomics** and automatic tuning
+        - **Escape Analysis** and stack allocation
+        - **Object Layout** and memory footprint
+        - **Off-Heap Memory** management
+    - **Memory Analysis Tools** (**NEW**)
+        - **jmap**, **jhat**, **jstat** usage
+        - **VisualVM**, **JConsole** monitoring
+        - **Memory Leak Detection** patterns
+        - **Heap Dump Analysis** techniques
+    
+    ### 3.11 Performance and Best Practices
+    
+    - **API Performance Guidelines** (**NEW**)
+        - **StringBuilder initial capacity** optimization
+        - **Collection choice impact** on performance
+        - **Stream vs loop** performance considerations
+        - **Exception construction costs**
+    - **Memory Management** (**NEW**)
+        - **Object creation costs** in core APIs
+        - **Cache implementation** patterns
+        - **Memory leak detection** in collections
+    - **Security Best Practices** (**NEW**)
+        - **Secure file operations**
+        - **Input validation** patterns
+        - **Resource cleanup** guarantees
+    
+    ---
+    
+    ## **Module 4 — Git & Version Control**
+    
+    ### **4.1 Git Fundamentals**
+    
+    - What is Version Control?
+    - Centralized vs Distributed VCS
+    - Installing Git
+    - Repository basics (local + remote)
+    - Git configuration (`user.name`, `user.email`)
+    
+    ### **4.2 Core Git Operations**
+    
+    - Initializing a repo (`git init`)
+    - Staging & committing (working, staging, repository)
+    - `git add`, `git commit`, `git status`, `git log`
+    - Viewing history & diffs
+    - Undoing changes (`reset`, `restore`, `revert`)
+    
+    ### **4.3 Branching & Merging**
+    
+    - What is a branch?
+    - Creating & switching branches
+    - Fast-forward vs non-fast-forward merges
+    - Merge conflicts (detection, solving)
+    - Branch deletion
+    
+    ### **4.4 GitHub / Remote Repositories**
+    
+    - Adding remotes
+    - `git push`, `git pull`, `git fetch`
+    - GitHub repository structure
+    - SSH vs HTTPS authentication
+    
+    ### **4.5 Collaboration Workflows**
+    
+    - Forking & cloning
+    - Pull Requests
+    - Code review workflow
+    - Issue tracking and labels
+    - Protected branches & approvals
+    
+    ### **4.6 Git Best Practices**
+    
+    - Commit message conventions
+    - Branch naming conventions
+    - `.gitignore` usage
+    - Avoiding large commits
+    - Repository cleanup strategies
+    
+    ---
+    
+    ## **Module 5 — Design Patterns (Developer-Oriented)**
+    
+    ### **5.1 Introduction to Design Patterns**
+    
+    - What are design patterns?
+    - Creational, Structural, Behavioral categories
+    - Patterns in the context of Java & Spring
+    
+    ### **5.2 Creational Patterns**
+    
+    - Singleton
+        - Static instance
+        - Enum-based singleton
+        - Thread safety considerations
+    - Factory Method
+    - Abstract Factory
+    - Builder Pattern
+    - Prototype (shallow vs deep copy)
+    
+    ### **5.3 Structural Patterns**
+    
+    - Adapter Pattern
+    - Facade Pattern
+    - Proxy Pattern
+        - Relationship with Spring AOP
+    - Decorator Pattern
+    - Composite Pattern
+    
+    ### **5.4 Behavioral Patterns**
+    
+    - Strategy Pattern
+    - Template Method
+    - Observer Pattern
+    - Command Pattern
+    - Chain of Responsibility
+    
+    ### **5.5 Patterns Used in Spring**
+    
+    - Dependency Injection Pattern
+    - MVC Pattern
+    - Template Pattern (JdbcTemplate)
+    - Proxy Pattern (AOP & Transactions)
+    
+    ---
+    
+    ## **Module 6 — REST API Best Practices**
+    
+    ### **6.1 API Fundamentals**
+    
+    - REST architectural constraints
+    - Resource naming conventions
+    - HTTP methods & semantic correctness
+    - Status codes (2xx, 4xx, 5xx)
+    
+    ### **6.2 Request & Response Structuring**
+    
+    - DTO patterns
+    - Input validation
+    - Error response structure
+    - Validation messages
+    - Standard response wrapper
+    
+    ### **6.3 API Versioning**
+    
+    - URI versioning
+    - Header-based versioning
+    - Semantic versioning
+    
+    ### **6.4 Pagination & Filtering**
+    
+    - Page, size, sort parameters
+    - Offset vs cursor
+    - Filter query parameters
+    
+    ### **6.5 Security & Best Practices**
+    
+    - Avoid exposing internal entity models
+    - Prevent over-posting & mass assignment
+    - CORS
+    - Input sanitization basics
+    - Idempotency of PUT, DELETE
+    
+    ### **6.6 Consuming APIs**
+    
+    - Postman collections
+    - REST documentation (OpenAPI basics)
+    
+    ### **6.7 Asynchronous & Event-Driven Communication**
+    
+    - Synchronous vs Asynchronous communication
+    - Messaging fundamentals
+    - Kafka overview
+    - RabbitMQ overview
+    - Event-driven architecture basics
+    - When to use REST vs Messaging
+    
+    ### **6.8 Microservices Production Patterns**
+    
+    - API Gateway concept
+    - Centralized configuration
+    - Service-to-service communication
+    - Resilience patterns
+        - Circuit Breaker (Resilience4j)
+        - Retry & Timeout
+    - Distributed tracing basics
+    
+    ---
+    
+    ## **Module 7 — Testing (JUnit + Mockito)**
+    
+    ### **7.1 JUnit 5 Fundamentals**
+    
+    - Test lifecycle (`@BeforeEach`, `@AfterEach`)
+    - Assertions
+    - Parameterized tests
+    - Nested tests
+    
+    ### **7.2 Mockito Basics**
+    
+    - Creating mocks
+    - Mocking service & repository layers
+    - Argument matchers
+    - Verifying interactions
+    
+    ### **7.3 Spring Boot Test Framework**
+    
+    - `@SpringBootTest`
+    - `@WebMvcTest`
+    - `@DataJpaTest`
+    - Testing Controllers
+    - Testing Services
+    - Testing Repositories
+    
+    ### **7.4 Integration Testing**
+    
+    - Real database tests
+    - Using H2
+    - Using SQL scripts
+    - Testcontainers basics (optional)
+    
+    ### **7.5 Best Practices**
+    
+    - Unit tests vs integration tests
+    - Test naming conventions
+    - Avoiding brittle tests
+    
+    ---
+    
+    ## **Module 8 — Logging & Monitoring**
+    
+    ### **8.1 Logging Fundamentals**
+    
+    - Log levels (TRACE → ERROR)
+    - Logger declaration
+    - Purpose of logging (debugging, tracing)
+    
+    ### **8.2 SLF4J & Logback**
+    
+    - Logger instantiation
+    - Log patterns
+    - Logging placeholders
+    - Environment-specific logging
+    
+    ### **8.3 Structured Logging**
+    
+    - Log formats
+    - Correlation IDs
+    - Thread info
+    
+    ### **8.4 Error Logging & Exception Handling**
+    
+    - Logging exceptions the right way
+    - Avoiding sensitive data
+    
+    ### **8.5 Monitoring Basics**
+    
+    - Application metrics
+    - Health checks
+    - Simple performance logging
+    
+    ### **8.6 Observability in Production Systems**
+    
+    - Metrics vs Logs vs Traces
+    - Spring Boot Actuator (deep dive)
+    - Correlation IDs in logs
+    - Centralized logging (ELK stack – concept)
+    - Prometheus & Grafana (conceptual overview)
+    
+    ---
+    
+    ## **Module 9 — Build, Deploy & Project Workflow**
+    
+    ### **9.1 Maven Essentials**
+    
+    - POM structure
+    - Build lifecycle
+    - Dependencies and scopes
+    - Plugins
+    - Multi-module structure (simple)
+    
+    ### **9.2 Deployable Artifacts**
+    
+    - JAR vs WAR
+    - Fat JAR creation
+    - Environment configs
+    
+    ### **9.3 CI/CD Fundamentals (Conceptual)**
+    
+    - What is CI?
+    - What is CD?
+    - Typical workflow: Build → Test → Package → Deploy
+    - GitHub Actions basics (concepts only)
+    
+    ### **9.4 Packaging & Versioning**
+    
+    - Semantic versioning
+    - Application properties for environments
+    
+    ### **9.5 Cloud-Native Readiness**
+    
+    - Cloud-native principles
+    - Externalized configuration
+    - Secrets management basics
+    - Containers vs Virtual Machines
+    
+    ---
+    
+    ## **Module 10 — Docker (Basics Only)**
+    
+    ### **10.1 Docker Essentials**
+    
+    - What is a container?
+    - Image vs Container
+    - Docker installation
+    
+    ### **10.2 Writing Dockerfiles**
+    
+    - Base image selection (OpenJDK)
+    - Copying jar
+    - Exposing ports
+    - ENTRYPOINT vs CMD
+    
+    ### **10.3 Docker Commands**
+    
+    - `docker build`
+    - `docker run`
+    - `docker ps`, `docker logs`
+    - Removing containers/images
+    
+    ### **10.4 Docker Compose Basics**
+    
+    - Running app + database
+    - Environment variables
+    
+    ### **10.5 Best Practices**
+    
+    - Image size optimization
+    - Using `.dockerignore`
+    
+    ---
+    
+    ## **Module 11 — Clean Code & Project Architecture**
+    
+    ### **11.1 Clean Code Principles**
+    
+    - Naming conventions
+    - Method and class sizing
+    - Single responsibility
+    - Avoiding God classes
+    - Avoiding deep nesting
+    
+    ### **11.2 Packaging Structure**
+    
+    - entity
+    - dao
+    - service
+    - controller
+    - util
+    - config
+    - exception
+    
+    ### **11.3 DTO & Entity Mapping**
+    
+    - Why DTOs?
+    - Using ModelMapper / manual mapping
+    
+    ### **11.4 Exception Handling Layer**
+    
+    - Global exception handler
+    - Custom exception structure
+    
+    ### **11.5 Refactoring Techniques**
+    
+    - Removing duplication
+    - Improving readability
+    - Applying design principles
+    
+    ---
+    
+    ## **Module 12 — Real-World Project Practices (Aligned with Capstone)**
+    
+    ### **12.1 End-to-End Layered Architecture**
+    
+    - Controller
+    - Service
+    - DAO/Repository
+    - Entity layer
+    - DTO layer
+    - Utility & config layers
+    
+    ### **12.2 Database Layer Practices**
+    
+    - Connection pooling
+    - Transactions
+    - Savepoints
+    - Isolation levels
+    
+    ### **12.3 Logging & Monitoring in Real Project**
+    
+    - SLF4J patterns
+    - Error codes
+    - Audit logs
+    
+    ### **12.4 Global Exception Handling**
+    
+    - REST error structure
+    - Handling validation errors
+    
+    ### **12.5 Real API Development Flow**
+    
+    - Requirements → API design
+    - Endpoint definitions
+    - Validation rules
+    - Business logic
+    - Persistence logic
+    - Testing the workflow
+    
+    ### **12.6 Project Deployment Basics**
+    
+    - Packaging
+    - Testing
+    - Running via Docker
+    
+    ---
+    
+    ## **Module 13 — JDBC Fundamentals & Connection Pooling**
+    
+    ### **13.1 JDBC Architecture**
+    
+    - JDBC drivers
+    - DriverManager
+    - Connection, Statement, PreparedStatement
+    - ResultSet navigation & types
+    - ResultSetMetaData & DatabaseMetaData
+    
+    ### **13.2 CRUD Operations with JDBC**
+    
+    - Insert, update, delete queries
+    - Read operations with ResultSet
+    - Preventing SQL injection (PreparedStatement)
+    
+    ### **13.3 Advanced JDBC**
+    
+    - Batch operations
+    - Scrollable & updatable ResultSet
+    - CallableStatement (stored procedures)
+    
+    ### **13.4 Transactions & Savepoints**
+    
+    - Manual commit & rollback
+    - Savepoints for nested transactions
+    - Isolation levels
+    
+    ### **13.5 Connection Pooling**
+    
+    - Importance of pooling
+    - HikariCP configuration
+    - Validation timeout, min/max pool size
+    - Leak detection
+    
+    ---
+    
+    ## **Module 14 — Hibernate / JPA ORM**
+    
+    ### **14.1 ORM Fundamentals**
+    
+    - What is ORM?
+    - JPA vs Hibernate
+    - Entities & persistence context
+    - Sessions & SessionFactory
+    
+    ### **14.2 Entity Mapping**
+    
+    - @Entity, @Id, @GeneratedValue
+    - Table/column mapping
+    - Primitive & object fields
+    - Embedded types
+    
+    ### **14.3 Relationships**
+    
+    - One-to-One
+    - One-to-Many
+    - Many-to-One
+    - Many-to-Many
+    - Join tables & mappedBy
+    - Cascade types & orphanRemoval
+    
+    ### **14.4 Fetching Strategies**
+    
+    - Lazy vs Eager loading
+    - N+1 problem & solutions
+    
+    ### **14.5 Hibernate Querying**
+    
+    - HQL
+    - JPQL
+    - Criteria API
+    - Named queries
+    
+    ### **14.6 Hibernate Caching**
+    
+    - First-level cache
+    - Second-level cache basics
+    
+    ### **14.7 Database Migration & Schema Versioning**
+    
+    - Why migrations are required
+    - Flyway overview & workflow
+    - Liquibase (conceptual)
+    - Versioned schema management
+    - Rollback strategies
+    - Environment-based migrations
+    
+    ---
+    
+    ## **Module 15 — Java Web Development (Servlets & JSP)**
+    
+    ### **15.1 Servlet Basics**
+    
+    - HTTP request/response lifecycle
+    - init(), service(), destroy()
+    - HttpServletRequest & HttpServletResponse
+    
+    ### **15.2 Servlet Concepts**
+    
+    - Request attributes
+    - Forward vs include
+    - URL rewriting & cookies
+    - HttpSession management
+    
+    ### **15.3 Filters & Listeners**
+    
+    - Filter chain
+    - ServletContextListener
+    - Session listener
+    
+    ### **15.4 JSP Fundamentals**
+    
+    - JSP lifecycle
+    - Scriptlets (deprecated)
+    - EL (Expression Language)
+    - JSTL basics
+    
+    ---
+    
+    ## **Module 16 — Spring Core (IoC & DI)**
+    
+    ### **16.1 Spring Framework Introduction**
+    
+    - IoC container
+    - BeanFactory vs ApplicationContext
+    
+    ### **16.2 Dependency Injection**
+    
+    - Constructor injection
+    - Setter injection
+    - Field injection (pros/cons)
+    
+    ### **16.3 Bean Scope & Lifecycle**
+    
+    - Singleton
+    - Prototype
+    - Request/session scopes (web apps)
+    - Bean initialization & destruction
+    
+    ### **16.4 Spring Configuration Styles**
+    
+    - XML-based
+    - Annotation-based (@Component, @Service, etc.)
+    - Java-based (@Configuration, @Bean)
+    
+    ### **16.5 Autowiring**
+    
+    - @Autowired
+    - @Qualifier
+    - @Primary
+    
+    ---
+    
+    ## **Module 17 — Spring JDBC & Spring Data Access**
+    
+    ### **17.1 Spring JDBC**
+    
+    - JdbcTemplate
+    - NamedParameterJdbcTemplate
+    - RowMapper
+    - BeanPropertyRowMapper
+    - Exception translation
+    
+    ### **17.2 Spring Transaction Management**
+    
+    - @Transactional
+    - Propagation
+    - Isolation levels
+    - Rollback rules
+    
+    ### **17.3 Spring Data JPA**
+    
+    - CrudRepository
+    - JpaRepository
+    - Derived queries
+    - @Query (JPQL)
+    - Pagination & Sorting
+    
+    ---
+    
+    ## **Module 18 — Spring MVC**
+    
+    ### **18.1 Spring MVC Architecture**
+    
+    - DispatcherServlet
+    - HandlerMapping
+    - ViewResolver
+    - Processing workflow
+    
+    ### **18.2 Controllers & Request Mapping**
+    
+    - @Controller
+    - @RequestMapping
+    - @GetMapping, @PostMapping, etc.
+    - @PathVariable
+    - @RequestParam
+    
+    ### **18.3 Data Binding & Validation**
+    
+    - @ModelAttribute
+    - BindingResult
+    - @Valid
+    - Bean Validation (JSR-380)
+    
+    ### **18.4 View Technologies**
+    
+    - JSP rendering
+    - Thymeleaf basics
+    
+    ### **18.5 Interceptors & Exception Handling**
+    
+    - HandlerInterceptor
+    - @ControllerAdvice
+    - @ExceptionHandler
+    
+    ---
+    
+    ## **Module 19 — Spring Boot + REST**
+    
+    ### **19.1 Spring Boot Fundamentals**
+    
+    - Auto-configuration
+    - Starters
+    - Spring Boot project structure
+    - application.properties / application.yml
+    
+    ### **19.2 Building REST APIs**
+    
+    - @RestController
+    - Request mappings
+    - RequestBody & ResponseBody
+    
+    ### **19.3 Working with Data**
+    
+    - Spring Data JPA with Boot
+    - Repository layer
+    - Service layer
+    - Entity-DTO mapping
+    
+    ### **19.4 REST Clients**
+    
+    - RestTemplate
+    - WebClient (intro)
+    
+    ### **19.5 Advanced REST Topics**
+    
+    - Exception handling with @ControllerAdvice
+    - ResponseEntity
+    - Global error format
+    
+    ### **19.6 Monitoring & Documentation**
+    
+    - Spring Boot Actuator
+    - OpenAPI / Swagger
+    
+    ### **19.7 Caching in Real Applications**
+    
+    - Why caching is required
+    - Spring Cache abstraction
+    - Cache providers overview
+        - Redis (industry standard)
+    - Cache eviction strategies
+    - Read-through vs Write-through caching
+    
+    ---
+    
+    ## **Module 20 — Spring Security (Basics)**
+    
+    ### **20.1 Spring Security Fundamentals**
+    
+    - Authentication vs Authorization
+    - Security filter chain
+    
+    ### **20.2 Configuring Security**
+    
+    - HttpSecurity basics
+    - Securing MVC endpoints
+    - Securing REST endpoints
+    
+    ### **20.3 UserDetailsService**
+    
+    - Custom user service
+    - Password encoders
+    
+    ### **20.4 Method-Level Security**
+    
+    - @PreAuthorize
+    - @PostAuthorize
+    
+    ### **20.5 JWT Basics (Optional but Useful)**
+    
+    - Token structure
+    - Stateless authentication
+    - Verifying tokens
+    
+    ### **20.6 Advanced Authentication & Authorization**
+    
+    - OAuth2 fundamentals
+    - Authorization Server vs Resource Server
+    - OpenID Connect (OIDC) basics
+    
+    ### **20.7 JWT in Real Projects**
+    
+    - Token structure & claim design
+    - Access token vs Refresh token
+    - Token expiry, rotation & revocation
+    - Stateless authentication trade-offs
+    
+    ### **20.8 Password & Credential Security**
+    
+    - BCrypt vs Argon2
+    - Password policies
+    - Secure credential storage
+    
+    ### **20.9 Web Security Essentials**
+    
+    - CORS vs CSRF (practical scenarios)
+    - OWASP Top 10 (backend-focused)
+        - Injection
+        - Broken authentication
+        - Sensitive data exposure
+    
+    ---
+    
+    # **Module 21 — Spring Tool Suite (STS) in Eclipse**
+    
+    ## **21.1 Introduction to Spring Tool Suite (STS)**
+    
+    - What is Spring Tool Suite?
+    - Difference between STS vs Eclipse
+    - Installing STS plugin inside Eclipse
+    - Installing additional plugins (JSON editor, Lombok, Maven helpers)
+    - Workspace setup & recommended preferences
+    
+    ---
+    
+    ## **21.2 Workspace & Project Setup**
+    
+    ### **21.2.1 Workspace Configuration**
+    
+    - Workspace folder best practices
+    - Encoding (UTF-8) & line break uniformity
+    - Code formatter & clean-up templates
+    - Auto-save + auto-format setup
+    
+    ### **21.2.2 Maven Integration**
+    
+    - Auto-build Maven projects
+    - Downloading dependencies on save
+    - Cleaning and rebuilding workspace
+    - Common Maven issues & quick fixes
+    
+    ---
+    
+    ## **21.3 Creating Spring Boot Projects Quickly**
+    
+    ### **21.3.1 Using Spring Initializr in STS**
+    
+    - Selecting dependencies
+    - Packaging, Java Version, Build Tool
+    - Project naming conventions
+    - Folder structure verification
+    
+    ### **21.3.2 Using Templates or Starter Projects**
+    
+    - Custom Spring Boot starter template
+    - Pre-configured:
+        - Logging
+        - Swagger
+        - Exception handler
+        - Sample controller/service/repo
+    
+    ### **21.3.3 Importing Existing Projects**
+    
+    - Maven → Existing Maven Project
+    - Gradle → Existing Gradle Project
+    
+    ---
+    
+    ## **21.4 STS Productivity Features**
+    
+    ### **21.4.1 Live Hover & Code Assistance**
+    
+    - @Autowired hover information
+    - REST endpoint hover preview
+    - Bean scanning visualizer
+    - Quick references panel
+    
+    ### **21.4.2 Spring Tools Dashboard**
+    
+    - Add/remove dependencies
+    - Boot Dashboard (start/stop apps quickly)
+    - Viewing running apps and actuators
+    - Opening request mappings for controllers
+    
+    ### **21.4.3 Boot Dashboards**
+    
+    - Hot reload via Spring DevTools
+    - Restarting individual modules
+    - Viewing application logs
+    - Tailing logs inside the IDE
+    
+    ---
+    
+    ## **21.5 Recommended Plugins for Fast Development**
+    
+    ### **21.5.1 Lombok**
+    
+    - Removes boilerplate:
+        - Getters/Setters
+        - Constructors
+        - Builder
+        - Equals/Hashcode
+    - Lombok setup in Eclipse
+    - Lombok troubleshooting
+    
+    ### **21.5.2 Easy Plugins**
+    
+    - Eclipse Web Developer Tools
+    - JSON Editor plugin
+    - REST Client plugin (optional)
+    - YAML editor plugin
+    - MapStruct support (for DTO mapping)
+    
+    ---
+    
+    ## **21.6 Boilerplate Generators & Templates**
+    
+    ### **21.6.1 Lombok (Primary Boilerplate)**
+    
+    - @Data
+    - @Builder
+    - @Value
+    - @Slf4j
+    - @RequiredArgsConstructor
+    
+    ### **21.6.2 Templates for Common Layers**
+    
+    (You can pre-create these in “Preferences → Java → Code Templates”)
+    
+    - Controller class template
+    - Service interface + impl template
+    - Repository interface template
+    - Custom exception class template
+    - Standard API response template
+    - Global exception handler template
+    
+    ### **21.6.3 Avoiding Repeated Code**
+    
+    - Snippets for:
+        - try/catch blocks
+        - Logging statements
+        - ResponseEntity templates
+        - Validation patterns
+    
+    ---
+    
+    ## **21.7 Shortcuts & Fast Coding Techniques**
+    
+    ### **21.7.1 Eclipse Keyboard Shortcuts**
+    
+    - Ctrl + Shift + R → Open resource
+    - Ctrl + Shift + T → Open type
+    - Alt + Shift + R → Rename refactor
+    - Ctrl + 1 → Quick fix
+    - Ctrl + Shift + O → Organize imports
+    - Alt + Shift + L → Extract local variable
+    - Alt + Shift + M → Extract method
+    - Ctrl + Space → Smart completion
+    
+    ### **21.7.2 Navigation Shortcuts**
+    
+    - F3 → Go to declaration
+    - Alt + Left/Right → Navigate backward/forward
+    - Ctrl + E → Quick switch editor
+    
+    ### **21.7.3 Spring-Specific Shortcuts**
+    
+    - @GetMapping auto template
+    - @PostMapping template
+    - Generate constructor injection template
+    
+    ---
+    
+    ## **21.8 Debugging & Troubleshooting in STS**
+    
+    ### **21.8.1 Debugging Tools**
+    
+    - Breakpoints
+    - Step over / Step into
+    - Variable watches
+    - Conditional breakpoints
+    - Inspecting request/response in Spring MVC
+    
+    ### **21.8.2 Common Issues**
+    
+    - Port already in use
+    - Out-of-memory errors
+    - Maven build issues
+    - Lombok not working
+    - Tomcat/Boot restart issues
+    
+    ### **21.8.3 Performance Tips**
+    
+    - Increase heap for IDE
+    - Disable slow plugins
+    - Clean workspace regularly
+    
+    ---
+    
+    ## **21.9 Best Practices for Fast, Clean Development**
+    
+    ### **21.9.1 Code Quality Practices**
+    
+    - Auto-format on save
+    - Use meaningful package structure
+    - Keep layers separate (Controller → Service → Repo)
+    - DTO usage instead of Entities in controllers
+    - Well-structured exception handling
+    
+    ### **21.9.2 Development Workflow**
+    
+    - Start with a template project
+    - Build APIs in this order:
+        1. Entity
+        2. Repository
+        3. Service
+        4. Controller
+        5. DTO + Validation
+        6. Exception layer
+    - Use Swagger for testing
+    - Use Boot Dashboard for quick restarts
+    
+    ---
+    
+    ## **21.10 Extra Productivity Boosters**
+    
+    ### **21.10.1 Spring Boot DevTools**
+    
+    - Auto-restart
+    - Live reload
+    - Reducing development time
+    
+    ### **21.10.2 MapStruct for DTO Mapping**
+    
+    - Automates conversion between DTO ↔ Entity
+    - Reduces boilerplate
+    
+    ### **21.10.3 Easy REST Testing Tools**
+    
+    - Postman collections
+    - Thunder Client (VSCode-like) inside IDE
+    - Swagger UI auto-generated
+    
+    ---
+    
+    #
