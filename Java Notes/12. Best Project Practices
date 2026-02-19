@@ -1,0 +1,43 @@
+## **Module 12 — Real-World Project Practices (Aligned with Capstone)**
+
+### **12.1 End-to-End Layered Architecture**
+
+- Controller
+- Service
+- DAO/Repository
+- Entity layer
+- DTO layer
+- Utility & config layers
+
+### **12.2 Database Layer Practices**
+
+- Connection pooling
+- Transactions
+- Savepoints
+- Isolation levels
+
+### **12.3 Logging & Monitoring in Real Project**
+
+- SLF4J patterns
+- Error codes
+- Audit logs
+
+### **12.4 Global Exception Handling**
+
+- REST error structure
+- Handling validation errors
+
+### **12.5 Real API Development Flow**
+
+- Requirements → API design
+- Endpoint definitions
+- Validation rules
+- Business logic
+- Persistence logic
+- Testing the workflow
+
+### **12.6 Project Deployment Basics**
+
+- Packaging
+- Testing
+- Running via Docker
